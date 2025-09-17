@@ -11,7 +11,10 @@ type Value = {
 };
 
 export const useValues = () => {
-  const sessionValues = window.sessionStorage.getItem("values") || [];
+  const sessionValues =
+    typeof window !== "undefined"
+      ? window.sessionStorage.getItem("values") || []
+      : [];
   const [values, setValues] = useState<Array<Value>>(
     typeof sessionValues === "string"
       ? (JSON.parse(sessionValues) as Value[])
