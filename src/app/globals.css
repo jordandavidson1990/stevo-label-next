@@ -1,42 +1,95 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
+  background-color: #fcf9f0;
   margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", Times, serif;
+  color: #111;
 }
-
-a {
-  color: inherit;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Times New Roman", Times, serif;
+  margin: 0.6em 0 0.6em 0;
+  font-weight: normal;
+}
+p {
+  font-size: 1.15em;
+  margin: 1.2em 0;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.main-menu a {
+  display: block;
+  margin: 0.5em auto;
+  font-size: 2.2em;
+  text-align: center;
+  color: #000;
+  text-decoration: none;
+  padding: 0.1em 0;
+  transition: color 0.2s;
+}
+.main-menu a:hover {
+  color: #71797e;
   text-decoration: none;
 }
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.lofi-img-box {
+  text-align: center;
+  margin: 2em 0 2.3em 0;
+}
+.lofi-img {
+  display: block;
+  margin: 0 auto 0.5em auto;
+  width: 350px;
+  max-width: 80vw;
+  border: 1.5px solid #222;
+  background: #f9f8f2;
+  filter: grayscale(100%) contrast(1.2) brightness(1.05);
+  padding: 1.4em 1.1em 0.8em 1.1em;
+  box-shadow: 0 2px 0 0 #ccc, 0 0 0 2px #fff inset;
+}
+.lofi-caption {
+  font-size: 1em;
+  color: #444;
+  letter-spacing: 0.01em;
+  font-style: italic;
+  text-align: center;
+}
+.subtle-link {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1.5px dotted #aaa;
+  transition: border 0.2s;
+}
+.subtle-link:hover {
+  border-bottom: 1.5px solid #71797e;
+  color: #71797e;
+}
+.audio-title {
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 0.2em;
+}
+.footer {
+  text-align: center;
+  color: #888;
+  font-size: 1em;
+  margin: 2em 0 0.5em 0;
+  border-top: 1px solid #ddd;
+  padding-top: 1.4em;
+}
+@media (max-width: 600px) {
+  .lofi-img {
+    width: 95vw;
+    max-width: 97vw;
+  }
+  .main-menu a {
+    font-size: 1.5em;
   }
 }
