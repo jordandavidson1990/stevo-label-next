@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 
 type Value = {
@@ -9,7 +11,7 @@ type Value = {
 };
 
 export const useValues = () => {
-  const sessionValues = sessionStorage.getItem("values") || [];
+  const sessionValues = window.sessionStorage.getItem("values") || [];
   const [values, setValues] = useState<Array<Value>>(
     typeof sessionValues === "string"
       ? (JSON.parse(sessionValues) as Value[])
@@ -38,7 +40,7 @@ export const useValues = () => {
           }));
           console.log("mappedValues: ", mappedValues);
           setValues(mappedValues);
-          sessionStorage.setItem("values", JSON.stringify(mappedValues));
+          window.sessionStorage.setItem("values", JSON.stringify(mappedValues));
         })
         .catch((err) => console.error(err));
     }
