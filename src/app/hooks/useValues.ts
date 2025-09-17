@@ -42,7 +42,7 @@ export const useValues = () => {
         })
         .catch((err) => console.error(err));
     }
-  }, []);
+  }, [sessionValues.length, url]);
 
   return { values };
 };
