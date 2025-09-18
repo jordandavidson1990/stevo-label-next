@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useValues } from "../hooks/useValues";
 
 const GigsPage = () => {
@@ -33,11 +32,9 @@ const GigsPage = () => {
               <li key={`${index}-${value.venue}`} style={{ margin: "1em 0" }}>
                 {value.venue}
               </li>
-              <li key={`${index}-${value.image}`} style={{ margin: "1em 0" }}>
-                <Image src={value.image} alt={value.name} />
-              </li>
             </>
           ))}
+          more to come...
         </ul>
       ) : (
         <p>Loading gigs...</p>

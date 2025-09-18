@@ -17,9 +17,9 @@ export default function Home() {
         >
           <div className="main-menu">
             <a href="gigs">gigs</a>
-            <a href="releases">releases</a>
-            <a href="screenings">screenings</a>
-            <a href="everything-else">everythin else</a>
+            <a href="releases">releases (coming soon)</a>
+            <a href="screenings">screenings (coming soon)</a>
+            <a href="everything-else">everythin else (coming soon)</a>
           </div>
           <div style={{ textAlign: "center", margin: "1.2em 0 0 0" }}>
             <iframe
